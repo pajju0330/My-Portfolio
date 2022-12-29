@@ -1,0 +1,82 @@
+.nav{
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    margin-top: 6.5rem;
+    margin-left: 70vw;
+}
+img{
+    display: none;
+    float: left;
+    width: 3rem;
+    margin-right: 10rem;
+}
+.nav .nav-link{
+
+    font-family: 'Chivo Mono', monospace;
+    font-size: smaller;
+    /* border: 2px solid black; */
+    letter-spacing: 2px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: black;
+}
+.nav .nav-link:hover{
+    /* color: black; */
+    border-bottom: 2px solid skyblue;
+}
+.container{
+    margin-top: 10rem;
+    /* border: 2px solid black; */
+}
+
+.title{
+    margin-top: 0.5rem;
+    color: #505050;
+    letter-spacing: 1px;
+    font-family: 'PT Serif', serif;
+}
+.name{
+    font-family: 'Prosto One', cursive;
+    margin-top: 0.5rem;
+}
+.content{
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: 'PT Serif', serif;
+}
+.nav .btn{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .nav{
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;    
+        flex-direction: column;
+        /* border: 2px solid black; */
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        width: 95vw;
+    }
+    .nav .nav-link{
+        display: none;
+        padding: 0.5rem;
+        width: fit-content;
+        margin: 0.5rem;
+        letter-spacing: 3px;
+        /* border: 2px solid black; */
+        font-size: xx-small;
+    }
+    .nav .btn{
+        margin-left: 18rem;
+        display: inline ;
+        border-radius: 8px;
+    }
+    .container{
+        margin-top: 2rem ;
+    }
+}
