@@ -6,6 +6,7 @@ const toggler = document.getElementById('toggler');
 const menuIcons = document.getElementsByClassName('nav-link');
 const resume = document.getElementById('resume');
 const icon = document.getElementById('icon');
+const name = document.getElementById('name');
 let arr = [work,award,about,contact];
 // arr.push(work);
 for(let i = 0; i < arr.length; ++i){

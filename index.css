@@ -1,99 +1,155 @@
-.nav{
-    display: flex;
-    width: fit-content;
-    flex-direction: row;
-    /* border: 2px solid black; */
-    margin-top: 6.5rem;
-    margin-left: 70vw;
+.nav {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  margin-top: 6.5rem;
+  margin-left: 70vw;
 }
-img{
-    display: none;
-    float: left;
-    width: 3rem;
-    margin-right: 10rem;
+img {
+  display: none;
+  float: left;
+  width: 3rem;
+  margin-right: 10rem;
 }
-.nav .nav-link{
+.nav .nav-link {
+  font-family: "Chivo Mono", monospace;
+  font-size: smaller;
+  /* border: 2px solid black; */
+  letter-spacing: 2px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: black;
+}
+.nav .nav-link:hover {
+  border-bottom: 2px solid skyblue;
+}
+.container {
+  margin-top: 10rem;
+  /* border: 2px solid black; */
+}
 
-    font-family: 'Chivo Mono', monospace;
-    font-size: smaller;
-    /* border: 2px solid black; */
-    letter-spacing: 2px;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    color: black;
+.title {
+  margin-top: 0.5rem;
+  color: #505050;
+  letter-spacing: 1px;
+  font-family: "PT Serif", serif;
 }
-.nav .nav-link:hover{
-    border-bottom: 2px solid skyblue;
-}
-.container{
-    margin-top: 10rem;
-    /* border: 2px solid black; */
-}
-
-.title{
-    margin-top: 0.5rem;
-    color: #505050;
-    letter-spacing: 1px;
-    font-family: 'PT Serif', serif;
-}
-.name{
-    font-family: 'Prosto One', cursive;
-    margin-top: 0.5rem;
-}
-.content{
-    margin-top: 0.5rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-family: 'PT Serif', serif;
-}
-.nav .btn{
-    display: none;
+.name {
+  /* border: 2px solid red; */
+  width: fit-content;
+  font-family: "Prosto One", cursive;
+  margin-top: 0.5rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 @media screen and (max-width: 768px) {
-    .nav{
-        display: flex;
-        width: fit-content;
-        justify-content: center;
-        align-items: center;    
-        flex-direction: column;
-        /* border: 2px solid black; */
-        margin-top: 1rem;
-        margin-left: 0.5rem;
-        width: 95vw;
+  @keyframes typing {
+    from {
+      width: 0;
     }
-    .nav .nav-link{
-        display: none;
-        padding: 0.5rem;
-        width: fit-content;
-        margin: 0.5rem;
-        letter-spacing: 3px;
-        /* border: 2px solid black; */
-        font-size: xx-small;
+    to {
+      width: 100%;
     }
-    .nav .btn{
-        margin-left: 18rem;
-        display: inline ;
-        border-radius: 8px;
-        
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
     }
-    .container{
-        margin-top: 2rem ;
+    50% {
+      border-color: #FFC300;
     }
+  }
 }
-.btns{
-    margin-left: 7rem;
-    width: max-content;
-    padding-left: 0.2rem;
-    padding-right: 0.5rem;
-    border: 2px solid black;
-}
-.btns .fa-solid{
-    border-left: 2px solid black;
-    padding-top: 1rem;
-    padding-left: 0.5rem;
-    padding-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  .name {
+    margin-right: 70vw;
+  }
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 40%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #FFC300;
+    }
+  }
 }
 
-.btns .btn{
-    font-weight: bold;
+.content {
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "PT Serif", serif;
+}
+.nav .btn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 95vw;
+  }
+  .nav .nav-link {
+    display: none;
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0.5rem;
+    letter-spacing: 3px;
+    /* border: 2px solid black; */
+    font-size: xx-small;
+  }
+  .nav .btn {
+    margin-left: 18rem;
+    display: inline;
+    border-radius: 8px;
+  }
+  .container {
+    margin-top: 2rem;
+  }
+}
+.btns {
+  margin-left: 7rem;
+  width: max-content;
+  padding-left: 0.2rem;
+  padding-right: 0.5rem;
+  border: 2px solid black;
+}
+.btns .fa-solid {
+  border-left: 2px solid black;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.btns .btn {
+  font-weight: bold;
+}
+.btns .btn #resume-link {
+  color: black;
+  text-decoration: none;
 }
