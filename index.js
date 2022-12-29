@@ -4,6 +4,8 @@ const about  = document.getElementById('about');
 const contact  = document.getElementById('contact');
 const toggler = document.getElementById('toggler');
 const menuIcons = document.getElementsByClassName('nav-link');
+const resume = document.getElementById('resume');
+const icon = document.getElementById('icon');
 let arr = [work,award,about,contact];
 // arr.push(work);
 for(let i = 0; i < arr.length; ++i){
@@ -26,6 +28,13 @@ for(let i = 0; i < arr.length; ++i){
 }
 let flag = 1;
 toggler.onclick = () =>{
+    if(flag){
+        toggler.style.transform = 'rotate(0deg)';
+        flag = 1 - flag;
+    }else{
+        toggler.style.transform = 'rotate(45deg)';
+        flag = 1 - flag;
+    }
     console.log('hello');
     for(let i = 0; i < menuIcons.length; ++i){
         if(menuIcons[i].style.display === 'none'){
@@ -35,4 +44,13 @@ toggler.onclick = () =>{
             menuIcons[i].style.display = 'none';
         }
     }
+}
+/* transform: rotate(-45deg);   */
+resume.onclick = () => {
+    window.setTimeout(ThanksGiving,1000);
+}
+
+let ThanksGiving = () => {
+    icon.style.display = 'none'
+    resume.innerHTML = 'Thankyou !!';
 }

@@ -23,7 +23,6 @@ img{
     color: black;
 }
 .nav .nav-link:hover{
-    /* color: black; */
     border-bottom: 2px solid skyblue;
 }
 .container{
@@ -75,8 +74,26 @@ img{
         margin-left: 18rem;
         display: inline ;
         border-radius: 8px;
+        
     }
     .container{
         margin-top: 2rem ;
     }
+}
+.btns{
+    margin-left: 7rem;
+    width: max-content;
+    padding-left: 0.2rem;
+    padding-right: 0.5rem;
+    border: 2px solid black;
+}
+.btns .fa-solid{
+    border-left: 2px solid black;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.btns .btn{
+    font-weight: bold;
 }
