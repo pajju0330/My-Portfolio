@@ -1,3 +1,4 @@
+const body  = document.getElementById('body');
 const work  = document.getElementById('work');
 const award  = document.getElementById('award');
 const about  = document.getElementById('about');
@@ -6,7 +7,8 @@ const toggler = document.getElementById('toggler');
 const menuIcons = document.getElementsByClassName('nav-link');
 const resume = document.getElementById('resume');
 const icon = document.getElementById('icon');
-const name = document.getElementById('name');
+const home = document.getElementById('home');
+const contactPage = document.getElementById('contact-page');
 let arr = [work,award,about,contact];
 // arr.push(work);
 for(let i = 0; i < arr.length; ++i){
@@ -54,4 +56,23 @@ resume.onclick = () => {
 let ThanksGiving = () => {
     icon.style.display = 'none'
     resume.innerHTML = 'Thankyou !!';
+}
+
+contact.onclick = () =>{
+    home.style.display = 'none';
+    contactPage.style.display = 'inline';
+    body.style.backgroundColor = 'black';
+    toggler.style.border = '2px solid white';
+    for(let i = 0; i < menuIcons.length; ++i){
+        menuIcons[i].style.color = 'white';
+    }
+}
+work.onclick = () =>{
+    home.style.display = 'inline';
+    contactPage.style.display = 'none';
+    body.style.backgroundColor = 'white';
+    toggler.style.border = '2px solid black';
+    for(let i = 0; i < menuIcons.length; ++i){
+        menuIcons[i].style.color = 'black';
+    }
 }
